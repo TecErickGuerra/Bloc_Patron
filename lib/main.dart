@@ -46,10 +46,33 @@ class CounterPage extends StatelessWidget {
         ),
       ),
 
-      floatingActionButton: FloatingActionButton(
-        onPressed:() => context.read<CounterBloc>().add(CounterIncremented()),
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
+      floatingActionButton: Row(
+        mainAxisAlignment: MainAxisAlignment.end,
+        children: [
+          FloatingActionButton(
+            onPressed: () => context.read<CounterBloc>().add(CounterDecremented()),
+            tooltip: 'Decrementar',
+            backgroundColor: Colors.red,
+            heroTag: 'decrement',
+            child: const Icon(Icons.remove),
+          ),
+          const SizedBox(width: 10),
+          FloatingActionButton(
+            onPressed: () => context.read<CounterBloc>().add(CounterReset()),
+            tooltip: 'Resetear',
+            backgroundColor: Colors.blue,
+            heroTag: 'reset',
+            child: const Icon(Icons.refresh),
+          ),
+          const SizedBox(width: 10),
+          FloatingActionButton(
+            onPressed: () => context.read<CounterBloc>().add(CounterIncremented()),
+            tooltip: 'Incrementar',
+            backgroundColor: Colors.green,
+            heroTag: 'increment',
+            child: const Icon(Icons.add),
+          ),
+        ],
       ),
     );
   }
