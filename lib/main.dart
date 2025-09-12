@@ -33,7 +33,7 @@ class CounterPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: const Text('Counter con BLoC'),
+        title: const Text('Presiona uno de los botones para hacerle algo al contador'),
       ),
       body: Center(
         child: BlocBuilder<CounterBloc, int>(
