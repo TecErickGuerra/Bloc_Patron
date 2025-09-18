@@ -1,3 +1,8 @@
+#   Erick Jael Guerra Canto
+#   Tecnológico de Software
+#   Materia -
+#   -------------------------
+
 # Bloc_Patron
 A new Flutter Project.
 
